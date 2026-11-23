@@ -78,8 +78,9 @@ progressivement ou d'un coup au batch 30.
 
 Un générateur lit le CSV ligne par ligne. L'état se réduit à $k$ centres et $k$ effectifs, mis à jour par
 $\mu_j \leftarrow \mu_j + (x_i-\mu_j)/(n_j+1)$, ce qui fait de $\mu_j$ la moyenne exacte des points reçus.
-L'initialisation prend les $k$ premiers points, ou $k$ points tirés par échantillonnage réservoir (une passe, mémoire
-$O(k)$). Les affectations sont écrites ligne par ligne, et l'ARI est calculé sur la seule table de contingence.
+L'initialisation prend les $k$ premiers points, ou $k$ points tirés par échantillonnage réservoir, en une passe et
+avec une mémoire en $O(k)$. Les affectations sont écrites ligne par ligne, et l'ARI est calculé sur la seule table de
+contingence.
 
 - **Mémoire bornée.** Le pic reste entre 254 et 272 Kio de 10³ à 10⁶ points, contre 92 Mio pour pandas suivi de
   sklearn. Le temps croît linéairement : 13 s pour 10⁶ points.
