@@ -1,0 +1,11 @@
+# Versions avec lesquelles le notebook a été exécuté (Python 3.11.0, Windows).
+# pandas doit rester en 2.2 : pandas 3 casse le module apache_beam.dataframe de Beam 2.78.
+apache-beam==2.78.0
+scikit-learn==1.9.1
+numpy==2.4.6
+pandas==2.2.3
+matplotlib==3.11.2
+psutil
+ipykernel
+nbformat
+nbconvert
